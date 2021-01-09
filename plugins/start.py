@@ -3,13 +3,6 @@ from pyrogram import Client, Filters, StopPropagation, InlineKeyboardButton, Inl
 @Client.on_message(Filters.command(["start"]), group=-2)
 async def start(client, message):
     # return
-    db_id = []
-    with open("db.csv", encoding='utf-8-sig') as r:
-        csv_r = csv.DictReader(r, delimiter = ';')
-        for row in csv_r:
-            db_id.append(row['id'])
-    r.close()
-    
     joinButton = InlineKeyboardMarkup([
         [InlineKeyboardButton("Bot news 🤩", url="https://t.me/DGUuz")],
         [InlineKeyboardButton(
