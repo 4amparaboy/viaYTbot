@@ -3,7 +3,7 @@ import time
 
 admin_one = 677949397
 
-@Client.on_message(Filters.command(["users"], ["ads"], "cancel"))
+@Client.on_message(Filters.command(["users"], ["ads"], ["cancel"]))
 async def start(client, message):
     with open('sendik.txt', 'r') as cmd1:
         sendik = cmd1.read()
