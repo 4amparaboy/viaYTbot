@@ -10,8 +10,7 @@ async def start(client, message):
     if f'{message.chat.id}\n' not in idlar:
         with open('id_tg.txt', 'a') as f2:
             f2.write(f'{message.chat.id}\n')
-        with open('users.txt', 'a') as f3:
-            f3.write(f'{message.chat.username}\n')
+        await message.reply_text("yozildi")
 
     joinButton = InlineKeyboardMarkup([
         [InlineKeyboardButton("Bot news 🤩", url="https://t.me/DGUuz")],
