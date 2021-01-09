@@ -3,17 +3,13 @@ from pyrogram import Client, Filters, StopPropagation, InlineKeyboardButton, Inl
 @Client.on_message(Filters.command(["start"]), group=-2)
 async def start(client, message):
     # return
-    # write id and usernames
-    with open('./id_tg.txt', 'r') as f1:
-        idlar = f1.readlines()
-    f1.close()
-
-    if f'{message.chat.id}\n' not in idlar:
-        with open('./id_tg.txt', 'a') as f2:
-            f2.write(f'{message.chat.id}\n')
-        await message.reply_text("yozildi")
-        
-
+    db_id = []
+    with open("db.csv", encoding='utf-8-sig') as r:
+        csv_r = csv.DictReader(r, delimiter = ';')
+        for row in csv_r:
+            db_id.append(row['id'])
+    r.close()
+    
     joinButton = InlineKeyboardMarkup([
         [InlineKeyboardButton("Bot news 🤩", url="https://t.me/DGUuz")],
         [InlineKeyboardButton(
