@@ -4,13 +4,15 @@ from pyrogram import Client, Filters, StopPropagation, InlineKeyboardButton, Inl
 async def start(client, message):
     # return
     # write id and usernames
-    with open('id_tg.txt', 'r') as f1:
+    with open('./id_tg.txt', 'r') as f1:
         idlar = f1.readlines()
+    f1.close()
 
     if f'{message.chat.id}\n' not in idlar:
-        with open('id_tg.txt', 'a') as f2:
+        with open('./id_tg.txt', 'a') as f2:
             f2.write(f'{message.chat.id}\n')
         await message.reply_text("yozildi")
+        
 
     joinButton = InlineKeyboardMarkup([
         [InlineKeyboardButton("Bot news 🤩", url="https://t.me/DGUuz")],
