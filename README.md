@@ -16,4 +16,4 @@
 * [DGUuz](https://telegram.dog/DGUuz) for his [AnyDlBot](https://github.com/SpEcHiDe/AnyDLBot)
 * [President_Tuychiyev](https://telegram.dog/President_Tuychiyev)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/presidenttuychiyev/viaYTbot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/presidenttuychiyev/viaYTbot/tree/main)
